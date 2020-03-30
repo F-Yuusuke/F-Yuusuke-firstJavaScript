@@ -19,6 +19,11 @@
 
 const res = document.getElementById('btn');
 console.log(res);
-btn.addEventListener('mousedown',function(){
+btn.addEventListener('click',function(){
     console.log("成功したよ！");
+});
+
+const form = document.forms.myform;
+form.sample.addEventListener('change',function(){
+    console.log("何かが入力されました");
 });
