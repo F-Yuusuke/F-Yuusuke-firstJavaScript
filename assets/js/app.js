@@ -33,3 +33,8 @@ form.sample.addEventListener('change',function(){
 function test(){
     console.log(event.keyCode);
 };
+
+
+window.addEventListener('DOMContentLoaded',function() {
+    console.log('ページが読み込まれました！成功です！');
+});
