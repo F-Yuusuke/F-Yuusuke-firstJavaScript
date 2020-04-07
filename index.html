@@ -11,6 +11,7 @@
     
     
     <div class="rectangle">
+        <!-- // バックグラウンドカラーをランダムに変更するコード -->
         <div class="container">
             <div class="result">
                 <p id="result">今日の運勢は...</p>
@@ -18,14 +19,22 @@
             <button id="btn" class="btn">
                 <span>占う</span>
             </button>
+
             <button class="button">カラー変更</button>
                 <form name="myform">
                     <input name="sample"type="text">
                 </form>
-                <input type="text" id="txt1" onkeydown="test();">
+                <!-- <input type="text" id="txt1" onkeydown="test();"> -->
+                <div>
+                    <p>現在 <span class="string_num">0</span>文字入力中です。</p>
+                    <textarea class="textarea" cols="50" rows="10"></textarea>
+                </div>
             </div>
-    </div>
 
+            
+    </div>
+        
+        <!-- // 文字列の長さを取得するコード -->
 
 
   

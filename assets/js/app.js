@@ -40,15 +40,7 @@ window.addEventListener('DOMContentLoaded',function() {
 });
 
 
-// alert('2回目のこんにちは');
-// alert('alertを使うと画面にプイッと文字が表示される');
-// const a = 10;
-// const b = 20;
-// const sum = a + b;
-// console.log(sum);
-// console.log(`こんにちは。現在の時刻は${new Date()}です`);
-// let myName = 'ユウスケ';
-// alert(myName);
+
 
 
 
@@ -74,4 +66,20 @@ function onClickButton() {
     // 長方形のグラデーションのための変数（---startと---end）を変更
     rectangle.style.setProperty('--start', randomColorStart);
     rectangle.style.setProperty('--start', randomColorEnd);
+};
+
+
+
+// 文字列の長さを取得するコード
+// テキストエリア
+let textarea =document.querySelector('.textarea');
+// 入力中の文字数
+let string_num = document.querySelector('.string_num');
+// テキストを入力する度にonKeyUp()を実行する
+textarea.addEventListener('keyup' , onKeyUp);
+function onKeyUp() {
+    // 入力されたテキスト
+    const inputText = textarea.value;
+    // 文字数を反映
+    string_num.innerText = inputText.length;
 };
