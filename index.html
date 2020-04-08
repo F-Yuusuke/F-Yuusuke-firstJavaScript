@@ -26,9 +26,21 @@
                 </form>
                 <!-- <input type="text" id="txt1" onkeydown="test();"> -->
                 <div>
-                    <p>現在 <span class="string_num">0</span>文字入力中です。</p>
                     <textarea class="textarea" cols="50" rows="10"></textarea>
+                    <p>現在 <span class="string_num">0</span>文字入力中です。</p>
                 </div>
+            </div>
+
+
+            <header>
+                <label>県名の最初の一文字を入力してください <input type="text" maxlength="1" id="search-word-input"></label>
+            </header>
+            <div id="prefecture-list">
+                <button data-name='広島' data-phonetic='ひろしま'>広島</button>
+                <button data-name='岡山' data-phonetic='おかやま'>岡山</button>
+                <button data-name='山口' data-phonetic='やまぐち'>山口</button>
+                <button data-name='鳥取' data-phonetic='とっとり'>鳥取</button>
+                <button data-name='島根' data-phonetic='しまね'>島根</button>
             </div>
 
             
