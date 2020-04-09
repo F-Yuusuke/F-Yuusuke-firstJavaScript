@@ -87,6 +87,23 @@ function onKeyUp() {
 
 
 
+document.querySelector('#submitButton').addEventListener('click', (event) => {
+    // 電話番号を取得
+    const phoneNumber = document.querySelector('#phoneNumberText').
+    value;
+
+    // 電話番号に「-」が含まれている場合は''（空文字）に置き換える
+    const trimmedPhoneNumber = phoneNumber.replace(/-/g,'');
+    alert(`電話番号は${trimmedPhoneNumber}です`);
+
+    // ボタンのデフォルトの挙動をキャンセル
+    event.preventDefault();
+});
+
+
+
+
+
 // 文字列を取り出す ここは今の俺にはできませんでした！
 // console.log('JavaScript'.charAt(1));＝最大の文字数
 // 検索語
@@ -127,3 +144,5 @@ searchWordText.addEventListener('keyup', () => {
     }
     });
 });
+
+
