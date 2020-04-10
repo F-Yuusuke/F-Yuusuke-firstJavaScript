@@ -30,10 +30,19 @@
                     <p>現在 <span class="string_num">0</span>文字入力中です。</p>
                 </div>
 
-
+              <!-- 文字列の結合 -->
                 <input type="tel" placeholder="電話番号" id="phoneNumberText">
                 <p class="caption"><small>※ 実際にこのデータは送信されません</small></p>
                 <button id="submitButton" type="submit">送信する</button>
+
+
+                <div class="name_container">
+                    <label>性 <input type="text" class="text" id="familyNameText">
+                    </label>
+                    <label>名 <input type="text" id="firstNameText" class="text">
+                    </label>
+                </div>
+                <p id="fullName"></p>
 
 
                 

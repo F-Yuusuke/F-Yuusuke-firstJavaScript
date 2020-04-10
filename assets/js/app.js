@@ -102,6 +102,30 @@ document.querySelector('#submitButton').addEventListener('click', (event) => {
 
 
 
+// 文字列の結合
+// 姓の入力
+const familyNameText = document.querySelector('#familyNameText');
+// 名前の入力欄
+const firstNameText = document.querySelector('#firstNameText');
+// 姓名
+const fullName = document.querySelector('#fullName');
+// 文字を入力する度にonKeyUp()を実行する
+firstNameText.addEventListener('keyup', onKeyUp);
+familyNameText.addEventListener('keyup', onKeyUp);
+// 文字列が入力される度に実行される関数
+function onKeyUp() {
+    // 姓
+    const familyName = familyNameText.value;
+    // 名
+    const firstName = firstNameText.value;
+    // フルネーム出力
+    fullName.innerHTML = `${familyName} ${firstName}`;
+};
+
+
+
+
+
 
 
 // 文字列を取り出す ここは今の俺にはできませんでした！
