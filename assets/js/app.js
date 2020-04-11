@@ -123,6 +123,23 @@ function onKeyUp() {
 };
 
 
+// 今日の日付を取得
+const today = new Date();
+// #main内にHTMLコードを動的に書き出す
+document.querySelector('#main').innerHTML = `
+  <h1>今日${today.getMonth() + 1}/${today.getDate()}の天気</1>
+  <p>広島は、晴れでしょう<p/>
+`;
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -131,42 +148,42 @@ function onKeyUp() {
 // 文字列を取り出す ここは今の俺にはできませんでした！
 // console.log('JavaScript'.charAt(1));＝最大の文字数
 // 検索語
-const searchWordText = document.querySelector('#search-word-input');
+// const searchWordText = document.querySelector('#search-word-input');
 // 県名のリスト
-const prefectureList = document.querySelectorAll('#prefecture-List button');
+// const prefectureList = document.querySelectorAll('#prefecture-List button');
 
 // 文字が入力される度に内容のチェックを行う
-searchWordText.addEventListener('keyup', () => {
+// searchWordText.addEventListener('keyup', () => {
     // 検索語欄に入れられた値を取得
-    const searchWord = searchWordText.value;
+    // const searchWord = searchWordText.value;
     
     // 県名リストについてループ
     // elementはそれぞれの要素に当たる
-    prefectureList.forEach((element) => {
+    // prefectureList.forEach((element) => {
         // 検索語が無ければ全ての要素を表示する
-        if (!searchWord || searchWord === '') {
-            element.classList.remove('hide');
-            return;
-        }
+        // if (!searchWord || searchWord === '') {
+        //     element.classList.remove('hide');
+        //     return;
+        // }
 
     // 県名を取得
-    const prefectureName = element.dataset.name;
+    // const prefectureName = element.dataset.name;
     // ふりがなを取得
-    const phonetic = element.dataset.phonetic;
+    // const phonetic = element.dataset.phonetic;
 
     // 検索語の最初の一文字が一致するかどうかで、hideクラスの付与を決定する
     // hideクラスが付与された要素は、画面上から削除される
-    if (
-        searchWord.charAt(0) === prefectureName.charAt(0) ||
-        searchWord.charAt(0) === phonetic.charAt(0)
-    ) {
+    // if (
+    //     searchWord.charAt(0) === prefectureName.charAt(0) ||
+    //     searchWord.charAt(0) === phonetic.charAt(0)
+    // ) {
         // 検索語の最初の一文字が一致する場合、hideクラスを除去
-        element.classList.remove('hide');
-    } else {
+    //     element.classList.remove('hide');
+    // } else {
         // 検索語の最初の文字が一致しない場合、hideクラスを追加
-        element.classList.add('hide');
-    }
-    });
-});
+//         element.classList.add('hide');
+//     }
+//     });
+// });
 
 
